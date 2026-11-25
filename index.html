@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#090909" />
+  <title>Streamix — Watch anywhere</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar" id="navbar">
+    <a class="brand" href="#home" aria-label="Streamix home">STREAM<span>IX</span></a>
+    <nav class="nav-links"><a class="active" href="#home">Home</a><a href="#trending">TV Shows</a><a href="#movies">Movies</a><a href="#my-list">My List</a></nav>
+    <div class="nav-actions">
+      <label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Search titles..." aria-label="Search titles"></label>
+      <button class="avatar" aria-label="Profile">H</button>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero" aria-label="Featured title">
+      <div class="hero-backdrop"></div>
+      <div class="hero-content">
+        <p class="eyebrow"><span class="spark">✦</span> STREAMIX ORIGINAL</p>
+        <h1>THE LAST<br><em>FRONTIER</em></h1>
+        <div class="hero-meta"><span class="match">98% Match</span><span>2026</span><span class="rating">16+</span><span>2 Seasons</span><span class="quality">4K UHD</span></div>
+        <p class="hero-description">At the edge of the known world, one crew must uncover the truth behind a signal that should not exist. The journey home is only the beginning.</p>
+        <div class="hero-buttons"><button class="btn btn-light" id="playFeatured"><span>▶</span> Play</button><button class="btn btn-muted" id="moreInfo"><span>ⓘ</span> More Info</button></div>
+      </div>
+      <div class="hero-bottom"><span>Featured this week</span><div class="hero-dots"><i class="selected"></i><i></i><i></i><i></i></div></div>
+    </section>
+
+    <section class="content-section" id="trending">
+      <div class="section-heading"><div><p class="section-kicker">WHAT EVERYONE'S WATCHING</p><h2>Trending Now</h2></div><a href="#movies" class="see-all">Explore all <span>→</span></a></div>
+      <div class="movie-row" id="trendingRow"></div>
+    </section>
+    <section class="content-section" id="movies">
+      <div class="section-heading"><div><p class="section-kicker">HANDPICKED FOR YOU</p><h2>Popular Movies</h2></div><div class="filters"><button class="filter active" data-filter="All">All</button><button class="filter" data-filter="Action">Action</button><button class="filter" data-filter="Drama">Drama</button><button class="filter" data-filter="Sci-Fi">Sci-Fi</button></div></div>
+      <div class="movie-row" id="popularRow"></div>
+    </section>
+    <section class="content-section" id="my-list">
+      <div class="section-heading"><div><p class="section-kicker">SAVE IT FOR LATER</p><h2>My List</h2></div></div>
+      <div class="movie-row" id="myListRow"><p class="empty-list">Your list is empty. Add titles using the + button.</p></div>
+    </section>
+  </main>
+  <footer><a class="brand" href="#home">STREAM<span>IX</span></a><p>Stories worth staying in for.</p><small>© 2026 Streamix. Demo project for educational purposes.</small></footer>
+
+  <dialog id="detailsDialog" class="details-dialog"><button class="close-dialog" id="closeDialog" aria-label="Close">×</button><div id="dialogContent"></div></dialog>
+  <script src="script.js"></script>
+</body>
+</html>
